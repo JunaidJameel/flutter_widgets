@@ -14,15 +14,8 @@ class ExpandedWidget extends StatelessWidget {
           fit: BoxFit.cover,
         ),
         Expanded(
-          flex: 2,
           child: Container(
             color: Colors.purple[200],
-          ),
-        ),
-        Expanded(
-          flex: 3,
-          child: Container(
-            color: Colors.blue[200],
           ),
         ),
       ],
