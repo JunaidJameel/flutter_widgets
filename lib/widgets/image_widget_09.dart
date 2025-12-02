@@ -23,6 +23,11 @@ class ImageWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(30),
               image: DecorationImage(
                   fit: BoxFit.cover,
+
+                  // if you want a Black & White image use this
+
+                  // colorFilter: ColorFilter.mode(
+                  //   Colors.grey, BlendMode.saturation),
                   colorFilter: ColorFilter.mode(
                       Colors.black.withValues(alpha: .3), BlendMode.darken),
                   image: NetworkImage(
