@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/widgets/image_widget_09.dart';
+import 'package:flutter_widgets/widgets/sizedBox_widget_10.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -12,7 +12,7 @@ class HomeView extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [ImageWidget(), Row()],
+          children: [SizedBoxWidget(), Row()],
         ),
       ),
     );
