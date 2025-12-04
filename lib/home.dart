@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/widgets/sizedBox_widget_10.dart';
+import 'package:flutter_widgets/widgets/flexible_widget_11.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -8,12 +8,8 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(30.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [SizedBoxWidget(), Row()],
-        ),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        child: SafeArea(bottom: false, child: FlexibleWidget()),
       ),
     );
   }
