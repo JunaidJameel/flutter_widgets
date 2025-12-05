@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/widgets/flexible_widget_11.dart';
+import 'package:flutter_widgets/widgets/alert_dialog_widget_12.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -9,7 +9,8 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        child: SafeArea(bottom: false, child: FlexibleWidget()),
+        child:
+            SafeArea(bottom: false, child: Center(child: AlertDialogWidget())),
       ),
     );
   }
