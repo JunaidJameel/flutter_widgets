@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/widgets/alert_dialog_widget_12.dart';
+import 'package:flutter_widgets/widgets/filter_chip_widget_13.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -8,9 +8,8 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        child:
-            SafeArea(bottom: false, child: Center(child: AlertDialogWidget())),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 120),
+        child: SafeArea(bottom: false, child: FilterChipWidget()),
       ),
     );
   }
