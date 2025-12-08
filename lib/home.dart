@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/widgets/circle_avatar_widget_15.dart';
+import 'package:flutter_widgets/widgets/elevated_button_widget_16.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -12,8 +12,9 @@ class HomeView extends StatelessWidget {
         child: SafeArea(
             bottom: false,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: [CircleAvatarWidget(), Row()],
+              children: [ElevatedButtonWidget(), Row()],
             )),
       ),
     );
