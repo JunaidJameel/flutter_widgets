@@ -14,7 +14,9 @@ class CircleAvatarWidget extends StatelessWidget {
         backgroundColor: Colors.grey[300],
         backgroundImage: NetworkImage(
             'https://i.pinimg.com/736x/5e/de/c9/5edec9c3fe4fd6e69a722dba9fafa5ba.jpg'),
-        child: Icon(Icons.favorite, color: Colors.red, size: 30),
+
+        // Use child to display anything on top of background image
+        //  child: Icon(Icons.favorite, color: Colors.red, size: 30),
       ),
     );
   }
