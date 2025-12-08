@@ -31,7 +31,3 @@ class AppBarWidget extends StatelessWidget {
     );
   }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 3c9e476 (Filter Chip Widget)
