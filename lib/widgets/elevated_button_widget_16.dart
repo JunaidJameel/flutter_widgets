@@ -8,15 +8,17 @@ class ElevatedButtonWidget extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: ElevatedButton(
-        onPressed: () {},
         style: ElevatedButton.styleFrom(
-            elevation: 5,
-            overlayColor: Colors.blue,
-            shadowColor: Colors.grey,
-            backgroundColor: Colors.purple[200],
-            padding: EdgeInsets.symmetric(vertical: 15),
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12))),
+          elevation: 5,
+          shadowColor: Colors.grey,
+          overlayColor: Colors.blue,
+          backgroundColor: Colors.purple[200],
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+          padding: EdgeInsets.symmetric(vertical: 15),
+        ),
+        onPressed: () {},
         child: Text(
           'Elevated Button',
           style: TextStyle(fontSize: 22, color: Colors.black),
