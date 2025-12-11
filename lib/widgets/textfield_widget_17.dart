@@ -10,23 +10,24 @@ class TextFieldWidget extends StatefulWidget {
 
 class _TextFieldWidgetState extends State<TextFieldWidget> {
   final _controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         TextField(
           controller: _controller,
-          cursorColor: Colors.white,
           style: TextStyle(color: Colors.white, fontSize: 18),
+          cursorColor: Colors.white,
           decoration: InputDecoration(
             prefixIcon:
                 Icon(CupertinoIcons.search, color: Colors.white, size: 22),
             suffixIcon: Icon(CupertinoIcons.arrow_right_circle_fill,
                 color: Colors.green[400], size: 30),
-            fillColor: Colors.black87,
-            filled: true,
             hintText: 'Search',
             hintStyle: TextStyle(color: Colors.white, fontSize: 18),
+            fillColor: Colors.black87,
+            filled: true,
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
               borderSide: BorderSide.none,

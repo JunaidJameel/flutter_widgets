@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/widgets/textfield_widget_17.dart';
+import 'package:flutter_widgets/widgets/richText_widget_18.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -7,15 +7,15 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.green[100],
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 120),
         child: SafeArea(
             bottom: false,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [TextFieldWidget(), Row()],
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [RichTextWidget(), Row()],
             )),
       ),
     );
