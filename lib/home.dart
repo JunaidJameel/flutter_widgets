@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/widgets/richText_widget_18.dart';
+import 'package:flutter_widgets/widgets/checkBox_widget_19.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -7,15 +7,15 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green[100],
+      backgroundColor: Colors.grey[300],
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 120),
         child: SafeArea(
             bottom: false,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [RichTextWidget(), Row()],
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [CheckBoxWidget(), Row()],
             )),
       ),
     );
