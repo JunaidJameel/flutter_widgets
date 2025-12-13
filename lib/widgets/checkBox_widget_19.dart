@@ -9,10 +9,11 @@ class CheckBoxWidget extends StatefulWidget {
 
 class _CheckBoxWidgetState extends State<CheckBoxWidget> {
   bool? isChecked = false;
+
   @override
   Widget build(BuildContext context) {
     return Transform.scale(
-        scale: 1.5,
+        scale: 3,
         child: Checkbox(
             activeColor: Colors.green,
             shape:
