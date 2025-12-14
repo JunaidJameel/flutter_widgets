@@ -9,7 +9,7 @@ class TextStyleWidget extends StatelessWidget {
       children: [
         Expanded(
           child: Text(
-            'Flutter TextStyle Tutorial with a very long text that will overflow',
+            'Flutter TextStyle Tutorial',
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
               fontSize: 30,
