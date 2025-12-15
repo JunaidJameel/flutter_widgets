@@ -8,7 +8,7 @@ class InkWellWidget extends StatelessWidget {
     return InkWell(
       splashColor: Colors.red[300],
       onTap: () {
-        print('Button Pressed');
+        print('Button is Pressed');
       },
       child: Ink(
         height: 200,

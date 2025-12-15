@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/widgets/checkBox_widget_19.dart';
-import 'package:flutter_widgets/widgets/inkwell_widget_21.dart';
-import 'package:flutter_widgets/widgets/textstyle_widget_20.dart';
+import 'package:flutter_widgets/widgets/list_tile_widget_22.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -17,7 +15,7 @@ class HomeView extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: [InkWellWidget(), Row()],
+              children: [ListTileWidget(), Row()],
             )),
       ),
     );
