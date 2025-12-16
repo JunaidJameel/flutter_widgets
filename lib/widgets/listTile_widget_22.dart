@@ -6,19 +6,14 @@ class ListTileWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      onTap: () {},
       contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
-      onTap: () {
-        print('ListTile Tapped');
-      },
+      tileColor: Colors.purple[200],
       leading: CircleAvatar(
         radius: 30,
         backgroundImage: NetworkImage(
             'https://i.pinimg.com/736x/d0/fe/4e/d0fe4e76983fcd6ebf3675509690e26a.jpg'),
       ),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
-      ),
-      tileColor: Colors.purple[200],
       title: Text(
         'ListTile ',
         style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
@@ -32,6 +27,9 @@ class ListTileWidget extends StatelessWidget {
         '2 Min',
         style: TextStyle(
             fontSize: 15, color: Colors.black87, fontWeight: FontWeight.bold),
+      ),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
       ),
     );
   }
