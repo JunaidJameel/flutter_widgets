@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets/widgets/cupertino_switch_widget_23.dart';
+import 'package:flutter_widgets/widgets/fitted_box_widget_24.dart';
 import 'package:flutter_widgets/widgets/listTile_widget_22.dart';
 
 class HomeView extends StatelessWidget {
@@ -8,7 +9,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green[50],
+      backgroundColor: Colors.purple[100],
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 120),
         child: SafeArea(
@@ -16,7 +17,12 @@ class HomeView extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: [CupertinoSwitchWidget(), Row()],
+              children: [
+                ClipRRect(
+                    borderRadius: BorderRadius.circular(12),
+                    child: FittedBoxWidget()),
+                Row()
+              ],
             )),
       ),
     );
