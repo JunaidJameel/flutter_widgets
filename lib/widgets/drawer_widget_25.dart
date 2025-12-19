@@ -22,26 +22,28 @@ class DrawerPage extends StatelessWidget {
           child: ListView(
             children: [
               Center(
-                  child: DrawerHeader(
-                      child: ClipRRect(
-                borderRadius: BorderRadius.circular(100),
-                child: Image.network(
-                    'https://i.pinimg.com/736x/be/c1/2f/bec12fcfbb56f53213fe07460497edc3.jpg'),
-              ))),
+                child: DrawerHeader(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(100),
+                    child: Image.network(
+                        'https://i.pinimg.com/736x/be/c1/2f/bec12fcfbb56f53213fe07460497edc3.jpg'),
+                  ),
+                ),
+              ),
               ListTile(
-                onTap: () => Navigator.pop(context),
                 leading: Icon(CupertinoIcons.home),
                 title: Text('Home'),
+                onTap: () => Navigator.pop(context),
               ),
               ListTile(
-                onTap: () => Navigator.pop(context),
                 leading: Icon(Icons.favorite),
-                title: Text('Favorite'),
+                title: Text('Favourite'),
+                onTap: () => Navigator.pop(context),
               ),
               ListTile(
-                onTap: () => Navigator.pop(context),
                 leading: Icon(Icons.logout),
-                title: Text('LogOut'),
+                title: Text('Logout'),
+                onTap: () => Navigator.pop(context),
               ),
             ],
           ),
