@@ -12,19 +12,18 @@ class StackWidget extends StatelessWidget {
           height: 200,
           width: 170,
           decoration: BoxDecoration(
-              color: Colors.purple[200],
-              image: DecorationImage(
-                  image: NetworkImage(
-                      'https://i.pinimg.com/736x/11/e9/b2/11e9b2816f50daf5994f14d6739bbf8b.jpg'),
-                  fit: BoxFit.cover),
-              shape: BoxShape.circle),
+            image: DecorationImage(
+                image: NetworkImage(
+                    'https://i.pinimg.com/736x/11/e9/b2/11e9b2816f50daf5994f14d6739bbf8b.jpg'),
+                fit: BoxFit.cover),
+            color: Colors.purple[200],
+            shape: BoxShape.circle,
+          ),
         ),
         CircleAvatar(
-            backgroundColor: Colors.black,
-            child: Icon(
-              Icons.add,
-              color: Colors.white,
-            ))
+          backgroundColor: Colors.black,
+          child: Icon(Icons.add, color: Colors.white),
+        ),
       ],
     );
   }
