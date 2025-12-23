@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class BackDropFilterWidget extends StatelessWidget {
@@ -23,7 +22,7 @@ class BackDropFilterWidget extends StatelessWidget {
             child: Container(
               color: Colors.black12,
             ),
-          )
+          ),
         ],
       ),
     );

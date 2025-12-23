@@ -4,6 +4,7 @@ import 'package:flutter_widgets/widgets/cupertino_switch_widget_23.dart';
 import 'package:flutter_widgets/widgets/fitted_box_widget_24.dart';
 import 'package:flutter_widgets/widgets/future_builder_widget_29.dart';
 import 'package:flutter_widgets/widgets/google_fonts_26.dart';
+import 'package:flutter_widgets/widgets/gridview_builder_widget_31.dart';
 import 'package:flutter_widgets/widgets/listTile_widget_22.dart';
 import 'package:flutter_widgets/widgets/stack_widget_27.dart';
 
@@ -14,14 +15,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],
-      body: SafeArea(
-          top: false,
-          bottom: false,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [BackDropFilterWidget()],
-          )),
+      body: SafeArea(top: true, bottom: false, child: GridviewBuilderWidget()),
     );
   }
 }
