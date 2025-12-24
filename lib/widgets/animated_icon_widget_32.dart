@@ -34,7 +34,7 @@ class _AnimatedIconWidgetState extends State<AnimatedIconWidget>
     return GestureDetector(
       onTap: _tap,
       child: AnimatedIcon(
-        icon: AnimatedIcons.close_menu,
+        icon: AnimatedIcons.play_pause,
         progress: _animationController,
         size: 200,
       ),
