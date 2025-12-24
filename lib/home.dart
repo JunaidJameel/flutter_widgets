@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/widgets/animated_icon_widget_32.dart';
 import 'package:flutter_widgets/widgets/back_drop_filter_widget_30.dart';
 import 'package:flutter_widgets/widgets/cupertino_switch_widget_23.dart';
 import 'package:flutter_widgets/widgets/fitted_box_widget_24.dart';
@@ -14,8 +15,18 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
-      body: SafeArea(top: true, bottom: false, child: GridviewBuilderWidget()),
+      backgroundColor: Colors.blue[100],
+      body: SafeArea(
+          top: false,
+          bottom: false,
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 130),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [AnimatedIconWidget(), Row()],
+            ),
+          )),
     );
   }
 }
