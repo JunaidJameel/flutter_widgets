@@ -8,6 +8,7 @@ import 'package:flutter_widgets/widgets/future_builder_widget_29.dart';
 import 'package:flutter_widgets/widgets/google_fonts_26.dart';
 import 'package:flutter_widgets/widgets/gridview_builder_widget_31.dart';
 import 'package:flutter_widgets/widgets/listTile_widget_22.dart';
+import 'package:flutter_widgets/widgets/slider_widget_34.dart';
 import 'package:flutter_widgets/widgets/stack_widget_27.dart';
 
 class HomeView extends StatelessWidget {
@@ -16,7 +17,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[100],
+      backgroundColor: Colors.grey[900],
       body: SafeArea(
           top: false,
           bottom: false,
@@ -25,7 +26,7 @@ class HomeView extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: [BottomSheetWidget(), Row()],
+              children: [SliderWidget(), Row()],
             ),
           )),
     );

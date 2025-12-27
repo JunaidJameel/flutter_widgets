@@ -5,33 +5,34 @@ class BottomSheetWidget extends StatelessWidget {
 
   void _tapSheet(BuildContext context) {
     showModalBottomSheet(
-        context: context,
         isScrollControlled: true,
+        context: context,
         builder: (_) => FractionallySizedBox(
             heightFactor: .55, child: _buildBottomSheetContent()));
   }
 
   Widget _buildBottomSheetContent() {
     return Container(
-        padding: EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(height: 20),
-            const Text(
-              'Bottom Sheet Title',
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-              ),
+      padding: EdgeInsets.all(20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(height: 20),
+          const Text(
+            'Bottom Sheet Title',
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
             ),
-            SizedBox(height: 20),
-            const Text(
-              'This is the content of your bottom sheet. You can add any widgets here.',
-              style: TextStyle(fontSize: 18),
-            ),
-          ],
-        ));
+          ),
+          SizedBox(height: 20),
+          const Text(
+            'This is the content of your bottom sheet. You can add any widgets here.',
+            style: TextStyle(fontSize: 18),
+          ),
+        ],
+      ),
+    );
   }
 
   @override
