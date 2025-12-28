@@ -14,10 +14,8 @@ class _SliderWidgetState extends State<SliderWidget> {
     return Column(
       children: [
         Slider(
-          label: _slide.toString(),
           activeColor: Colors.green,
           thumbColor: Colors.white,
-          //   inactiveColor: Colors.,
           value: _slide,
           onChanged: (val) {
             setState(() {

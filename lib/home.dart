@@ -8,6 +8,7 @@ import 'package:flutter_widgets/widgets/future_builder_widget_29.dart';
 import 'package:flutter_widgets/widgets/google_fonts_26.dart';
 import 'package:flutter_widgets/widgets/gridview_builder_widget_31.dart';
 import 'package:flutter_widgets/widgets/listTile_widget_22.dart';
+import 'package:flutter_widgets/widgets/listview_builder_widget_35.dart';
 import 'package:flutter_widgets/widgets/slider_widget_34.dart';
 import 'package:flutter_widgets/widgets/stack_widget_27.dart';
 
@@ -17,17 +18,15 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
+      backgroundColor: Colors.grey[200],
       body: SafeArea(
           top: false,
           bottom: false,
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 130),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [SliderWidget(), Row()],
+            padding: EdgeInsets.symmetric(
+              horizontal: 0,
             ),
+            child: ListViewBuilderWidget(),
           )),
     );
   }
