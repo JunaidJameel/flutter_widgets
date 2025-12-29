@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class ListViewBuilderWidget extends StatelessWidget {
   ListViewBuilderWidget({super.key});
 
-  final List<String> _imgList = [
+  final List<String> _imageList = [
     'https://i.pinimg.com/736x/5e/a4/47/5ea4478d968e9ac7cd2688beed67460a.jpg',
     'https://i.pinimg.com/736x/fb/b7/88/fbb7888f45ae967d2df3e383b474ff34.jpg',
     'https://i.pinimg.com/736x/88/1e/ac/881eace19a1ec0103db651b55526432c.jpg',
@@ -19,21 +19,21 @@ class ListViewBuilderWidget extends StatelessWidget {
         Expanded(
           child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: _imgList.length,
+              itemCount: _imageList.length,
               itemBuilder: (context, index) => Padding(
                     padding: const EdgeInsets.only(left: 8.0),
                     child: CircleAvatar(
                       radius: 40,
-                      backgroundImage: NetworkImage(_imgList[index]),
+                      backgroundImage: NetworkImage(_imageList[index]),
                     ),
                   )),
         ),
         Expanded(
           flex: 8,
           child: ListView.builder(
-              itemCount: _imgList.length,
+              itemCount: _imageList.length,
               itemBuilder: (context, index) =>
-                  _builderContent(_imgList[index])),
+                  _builderContent(_imageList[index])),
         ),
       ],
     );
@@ -45,23 +45,13 @@ class ListViewBuilderWidget extends StatelessWidget {
       height: 350,
       width: double.infinity,
       decoration: BoxDecoration(
-          color: Colors.black87,
-          borderRadius: BorderRadius.circular(16),
-          image: DecorationImage(
-              image: NetworkImage(imageUrl), fit: BoxFit.cover)),
+        color: Colors.black87,
+        borderRadius: BorderRadius.circular(16),
+        image: DecorationImage(
+          image: NetworkImage(imageUrl),
+          fit: BoxFit.cover,
+        ),
+      ),
     );
   }
-
-  // Widget _builderContent(String imageIndex) {
-  //   return Container(
-  //     margin: EdgeInsets.all(15),
-  //     height: 350,
-  //     width: double.infinity,
-  //     decoration: BoxDecoration(
-  //         color: Colors.black87,
-  //         borderRadius: BorderRadius.circular(15),
-  //         image: DecorationImage(
-  //             image: NetworkImage(imageIndex), fit: BoxFit.cover)),
-  //   );
-  // }
 }

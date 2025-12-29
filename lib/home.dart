@@ -1,16 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/widgets/animated_icon_widget_32.dart';
-import 'package:flutter_widgets/widgets/back_drop_filter_widget_30.dart';
-import 'package:flutter_widgets/widgets/bottomsheet_widget_33.dart';
-import 'package:flutter_widgets/widgets/cupertino_switch_widget_23.dart';
-import 'package:flutter_widgets/widgets/fitted_box_widget_24.dart';
-import 'package:flutter_widgets/widgets/future_builder_widget_29.dart';
-import 'package:flutter_widgets/widgets/google_fonts_26.dart';
-import 'package:flutter_widgets/widgets/gridview_builder_widget_31.dart';
-import 'package:flutter_widgets/widgets/listTile_widget_22.dart';
-import 'package:flutter_widgets/widgets/listview_builder_widget_35.dart';
-import 'package:flutter_widgets/widgets/slider_widget_34.dart';
-import 'package:flutter_widgets/widgets/stack_widget_27.dart';
+import 'package:flutter_widgets/widgets/drop_down_button_widget_36.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -23,10 +12,18 @@ class HomeView extends StatelessWidget {
           top: false,
           bottom: false,
           child: Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: 0,
+            padding: EdgeInsets.symmetric(horizontal: 0, vertical: 200),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              //mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 20, left: 10),
+                  child: DropDownButtonWidget(),
+                ),
+                Row(),
+              ],
             ),
-            child: ListViewBuilderWidget(),
           )),
     );
   }
