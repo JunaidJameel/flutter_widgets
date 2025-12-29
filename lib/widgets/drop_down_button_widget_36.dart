@@ -23,11 +23,8 @@ class _DropDownButtonWidgetState extends State<DropDownButtonWidget> {
       child: DropdownButton<String>(
         icon: Transform.translate(
           offset: const Offset(0, -8),
-          child: const Icon(
-            Icons.keyboard_arrow_down,
-            color: Colors.black,
-            size: 26,
-          ),
+          child: const Icon(Icons.keyboard_arrow_down,
+              color: Colors.black, size: 26),
         ),
         underline: Container(height: 1, color: Colors.grey),
         isExpanded: true,
@@ -38,10 +35,7 @@ class _DropDownButtonWidgetState extends State<DropDownButtonWidget> {
           return items.map((item) {
             return Text(
               item,
-              style: const TextStyle(
-                color: Colors.black,
-                fontSize: 18,
-              ),
+              style: const TextStyle(color: Colors.black, fontSize: 18),
             );
           }).toList();
         },
@@ -50,10 +44,7 @@ class _DropDownButtonWidgetState extends State<DropDownButtonWidget> {
             value: item,
             child: Text(
               item,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-              ),
+              style: const TextStyle(color: Colors.white, fontSize: 18),
             ),
           );
         }).toList(),
