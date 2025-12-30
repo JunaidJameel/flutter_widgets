@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/widgets/constrained_box_widget_37.dart';
 import 'package:flutter_widgets/widgets/drop_down_button_widget_36.dart';
 
 class HomeView extends StatelessWidget {
@@ -12,15 +13,12 @@ class HomeView extends StatelessWidget {
           top: false,
           bottom: false,
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 0, vertical: 200),
+            padding: EdgeInsets.symmetric(horizontal: 0, vertical: 100),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               //mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 20, left: 10),
-                  child: DropDownButtonWidget(),
-                ),
+                ConstrainedBoxWidget(),
                 Row(),
               ],
             ),
