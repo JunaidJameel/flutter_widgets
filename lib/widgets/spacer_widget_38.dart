@@ -6,18 +6,23 @@ class SpacerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
           height: 150,
           width: 150,
-          color: Colors.purple[200],
+          decoration: BoxDecoration(
+            color: Colors.purple[200],
+            borderRadius: BorderRadius.circular(12),
+          ),
         ),
         Spacer(),
         Container(
           height: 150,
           width: 150,
-          color: Colors.black,
+          decoration: BoxDecoration(
+            color: Colors.grey[900],
+            borderRadius: BorderRadius.circular(12),
+          ),
         ),
         Spacer(
           flex: 5,
@@ -25,7 +30,10 @@ class SpacerWidget extends StatelessWidget {
         Container(
           height: 150,
           width: 150,
-          color: Colors.green[300],
+          decoration: BoxDecoration(
+            color: Colors.green[300],
+            borderRadius: BorderRadius.circular(12),
+          ),
         ),
       ],
     );
