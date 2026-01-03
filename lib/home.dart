@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/widgets/constrained_box_widget_37.dart';
-import 'package:flutter_widgets/widgets/gridTile_widget_39.dart';
-import 'package:flutter_widgets/widgets/drop_down_button_widget_36.dart';
-import 'package:flutter_widgets/widgets/spacer_widget_38.dart';
+import 'package:flutter_widgets/widgets/date_picker_widget_41.dart';
 import 'package:flutter_widgets/widgets/tab_bar_widget_40.dart';
 
 class HomeView extends StatelessWidget {
@@ -16,7 +13,14 @@ class HomeView extends StatelessWidget {
         top: false,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 0.0, vertical: 0),
-          child: TabBarWidget(),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              DatePickerWidget(),
+              Row(),
+            ],
+          ),
         ),
       ),
     );
