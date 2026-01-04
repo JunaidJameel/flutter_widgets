@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets/widgets/date_picker_widget_41.dart';
+import 'package:flutter_widgets/widgets/gesture_detector_widget_42.dart';
 import 'package:flutter_widgets/widgets/tab_bar_widget_40.dart';
 
 class HomeView extends StatelessWidget {
@@ -17,7 +18,7 @@ class HomeView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              DatePickerWidget(),
+              GestureDetectorWidget(),
               Row(),
             ],
           ),
