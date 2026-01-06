@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/widgets/hero_animation_widget_43.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_widgets/home.dart';
 
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         useMaterial3: true,
       ),
-      home: const HeroAnimationPage(),
+      home: const HomeView(),
     );
   }
 }
