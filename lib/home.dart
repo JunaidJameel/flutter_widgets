@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/widgets/cached_network_image_widget_46.dart';
-import 'package:flutter_widgets/widgets/hero_animation_widget_43.dart';
-import 'package:flutter_widgets/widgets/material_button_widget_45.dart';
-import 'package:flutter_widgets/widgets/pageview_builder_widget_44.dart';
+import 'package:flutter_widgets/widgets/stream_builder_widget_47.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -10,7 +7,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.blue[100],
       body: SafeArea(
         top: false,
         bottom: false,
@@ -20,7 +17,7 @@ class HomeView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              CachedNetworkImageWidget(),
+              StreamBuilderWidget(),
               Row(),
             ],
           ),
