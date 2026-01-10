@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/widgets/lottie_animation_package_48.dart';
 import 'package:flutter_widgets/widgets/stream_builder_widget_47.dart';
 
 class HomeView extends StatelessWidget {
@@ -7,7 +8,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[100],
+      backgroundColor: Colors.grey.shade900,
       body: SafeArea(
         top: false,
         bottom: false,
@@ -17,7 +18,7 @@ class HomeView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              StreamBuilderWidget(),
+              LottieAnimationPackage(),
               Row(),
             ],
           ),
