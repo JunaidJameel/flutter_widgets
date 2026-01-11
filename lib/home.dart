@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/widgets/animated_text_kit_49.dart';
 import 'package:flutter_widgets/widgets/lottie_animation_package_48.dart';
 import 'package:flutter_widgets/widgets/stream_builder_widget_47.dart';
 
@@ -18,7 +19,7 @@ class HomeView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              LottieAnimationPackage(),
+              AnimatedTextKitPackage(),
               Row(),
             ],
           ),
