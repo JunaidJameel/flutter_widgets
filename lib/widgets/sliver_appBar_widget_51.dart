@@ -10,9 +10,14 @@ class SliverAppbarWidget extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            backgroundColor: Colors.black87,
-            expandedHeight: 250,
+            flexibleSpace: FlexibleSpaceBar(
+              background: Image.network(
+                'https://i.pinimg.com/736x/9f/f8/d4/9ff8d4e19a75d14fb1711b81260ae6f9.jpg',
+                fit: BoxFit.cover,
+              ),
+            ),
             pinned: true,
+            backgroundColor: Colors.black87,
             title: Text(
               'Sliver AppBar',
               style: GoogleFonts.oswald(
@@ -20,26 +25,20 @@ class SliverAppbarWidget extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   fontSize: 30),
             ),
-            flexibleSpace: FlexibleSpaceBar(
-              background: Image.network(
-                'https://i.pinimg.com/736x/9f/f8/d4/9ff8d4e19a75d14fb1711b81260ae6f9.jpg',
-                fit: BoxFit.cover,
-              ),
-            ),
+            expandedHeight: 250,
           ),
           SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (context, index) => Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Image.network(
-                      'https://i.pinimg.com/1200x/74/18/c9/7418c9cd4713cd3c17c01cececeaab97.jpg'),
-                ),
+              delegate: SliverChildBuilderDelegate(
+            (context, index) => Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: ClipRRect(
+                borderRadius: BorderRadiusGeometry.circular(20),
+                child: Image.network(
+                    'https://i.pinimg.com/1200x/74/18/c9/7418c9cd4713cd3c17c01cececeaab97.jpg'),
               ),
-              // childCount: 3,
             ),
-          ),
+            childCount: 3,
+          ))
         ],
       ),
     );
