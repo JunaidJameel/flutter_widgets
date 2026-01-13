@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/widgets/sliver_appBar_widget_51.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_widgets/home.dart';
 
@@ -15,10 +16,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Widgets',
       theme: ThemeData(
+        scaffoldBackgroundColor: Colors.grey[400],
         primarySwatch: Colors.blue,
         useMaterial3: true,
       ),
-      home: const HomeView(),
+      home: SliverAppbarWidget(),
     );
   }
 }
