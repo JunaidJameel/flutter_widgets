@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/widgets/data_table_widget_52.dart';
 import 'package:flutter_widgets/widgets/interactive_viewer_widge_50.dart';
 
 class HomeView extends StatelessWidget {
@@ -17,7 +18,7 @@ class HomeView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              InteractiveViewerWidget(),
+              DataTableWidget(),
               Row(),
             ],
           ),
