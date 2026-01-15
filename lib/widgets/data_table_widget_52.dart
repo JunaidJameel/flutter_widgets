@@ -19,12 +19,13 @@ class DataTableWidget extends StatelessWidget {
           ),
           SizedBox(height: 20),
           Theme(
-            data: Theme.of(context)
-                .copyWith(dividerTheme: DividerThemeData(color: Colors.black)),
+            data: Theme.of(context).copyWith(
+                dividerTheme: DividerThemeData(color: Colors.black12)),
             child: DataTable(
               headingTextStyle:
                   TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              dataTextStyle: TextStyle(fontSize: 17),
+              dataTextStyle:
+                  TextStyle(fontSize: 17, fontWeight: FontWeight.w500),
               columns: [
                 DataColumn(label: Text('Name')),
                 DataColumn(label: Text('Age')),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets/widgets/data_table_widget_52.dart';
 import 'package:flutter_widgets/widgets/interactive_viewer_widge_50.dart';
+import 'package:flutter_widgets/widgets/padding_widget_53.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -8,7 +9,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade900,
+      backgroundColor: Colors.blue.shade100,
       body: SafeArea(
         top: false,
         bottom: false,
@@ -18,7 +19,7 @@ class HomeView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              DataTableWidget(),
+              PaddingWidget(),
               Row(),
             ],
           ),
