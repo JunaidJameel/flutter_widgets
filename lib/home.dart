@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/widgets/data_table_widget_52.dart';
-import 'package:flutter_widgets/widgets/interactive_viewer_widge_50.dart';
-import 'package:flutter_widgets/widgets/padding_widget_53.dart';
-import 'package:flutter_widgets/widgets/time_picker_widget_54.dart';
+import 'package:flutter_widgets/widgets/staggered_gridview_55.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -10,22 +7,8 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue.shade100,
-      body: SafeArea(
-        top: false,
-        bottom: false,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              TimePickerWidget(),
-              Row(),
-            ],
-          ),
-        ),
-      ),
+      backgroundColor: const Color.fromARGB(255, 23, 22, 22),
+      body: StaggeredGridViewPackage(),
     );
   }
 }
