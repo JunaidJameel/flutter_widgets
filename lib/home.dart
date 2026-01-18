@@ -7,8 +7,22 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 23, 22, 22),
-      body: StaggeredGridViewPackage(),
+      backgroundColor: Colors.blue.shade100,
+      body: SafeArea(
+        top: false,
+        bottom: false,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              StaggeredGridViewPackage(),
+              Row(),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

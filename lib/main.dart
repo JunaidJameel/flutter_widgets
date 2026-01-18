@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/widgets/bottom_navbar_widget_56.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_widgets/home.dart';
 
@@ -16,7 +17,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Widgets',
       theme: ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(
-          Theme.of(context).textTheme,
+          Theme.of(context)
+              .textTheme
+              .copyWith(bodyMedium: TextStyle(fontSize: 24)),
         ),
         // dataTableTheme: const DataTableThemeData(
         //   // dataTextStyle: TextStyle(fontSize: 17.5, fontWeight: FontWeight.w400),
@@ -26,7 +29,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         useMaterial3: true,
       ),
-      home: const HomeView(),
+      home: const BottomNavbarPage(),
     );
   }
 }
