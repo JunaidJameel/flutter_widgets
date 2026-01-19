@@ -1,4 +1,6 @@
+import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/widgets/avatar_glow_package_57.dart';
 import 'package:flutter_widgets/widgets/staggered_gridview_55.dart';
 
 class HomeView extends StatelessWidget {
@@ -7,7 +9,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue.shade100,
+      backgroundColor: Colors.grey.shade900,
       body: SafeArea(
         top: false,
         bottom: false,
@@ -17,7 +19,7 @@ class HomeView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              StaggeredGridViewPackage(),
+              AvatarGlowPackage(),
               Row(),
             ],
           ),

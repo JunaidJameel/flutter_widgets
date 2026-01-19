@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.poppinsTextTheme(
           Theme.of(context)
               .textTheme
-              .copyWith(bodyMedium: TextStyle(fontSize: 24)),
+              .copyWith(bodyMedium: TextStyle(fontSize: 20)),
         ),
         // dataTableTheme: const DataTableThemeData(
         //   // dataTextStyle: TextStyle(fontSize: 17.5, fontWeight: FontWeight.w400),
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         useMaterial3: true,
       ),
-      home: const BottomNavbarPage(),
+      home: const HomeView(),
     );
   }
 }
