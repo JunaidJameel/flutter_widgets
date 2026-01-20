@@ -1,7 +1,5 @@
-import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/widgets/avatar_glow_package_57.dart';
-import 'package:flutter_widgets/widgets/staggered_gridview_55.dart';
+import 'package:flutter_widgets/widgets/media_query_widget_58.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -9,20 +7,16 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade900,
-      body: SafeArea(
-        top: false,
-        bottom: false,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              AvatarGlowPackage(),
-              Row(),
-            ],
-          ),
+      backgroundColor: Colors.grey.shade300,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 0.0, vertical: 0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            MediaQueryWidget(),
+            Row(),
+          ],
         ),
       ),
     );

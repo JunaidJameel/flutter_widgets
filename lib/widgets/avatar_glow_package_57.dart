@@ -12,7 +12,7 @@ class AvatarGlowPackage extends StatelessWidget {
       glowRadiusFactor: 1.5,
       duration: const Duration(milliseconds: 3000),
       curve: Curves.ease,
-      child: Icon(CupertinoIcons.add, size: 40, color: Colors.white),
+      child: Icon(CupertinoIcons.add, size: 70, color: Colors.white),
     );
   }
 }

@@ -16,10 +16,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Widgets',
       theme: ThemeData(
-        textTheme: GoogleFonts.poppinsTextTheme(
-          Theme.of(context)
-              .textTheme
-              .copyWith(bodyMedium: TextStyle(fontSize: 20)),
+        textTheme: GoogleFonts.barlowTextTheme(
+          Theme.of(context).textTheme.copyWith(
+                bodyMedium: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.grey[900]),
+              ),
         ),
         // dataTableTheme: const DataTableThemeData(
         //   // dataTextStyle: TextStyle(fontSize: 17.5, fontWeight: FontWeight.w400),
