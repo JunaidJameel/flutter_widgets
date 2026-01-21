@@ -12,27 +12,42 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Widgets',
-      theme: ThemeData(
-        textTheme: GoogleFonts.barlowTextTheme(
-          Theme.of(context).textTheme.copyWith(
-                bodyMedium: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.grey[900]),
-              ),
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).unfocus(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Widgets',
+        theme: ThemeData(
+          inputDecorationTheme: InputDecorationTheme(
+            hintStyle: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+                color: Colors.grey[900]),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12.0),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12.0),
+            ),
+          ),
+          textTheme: GoogleFonts.barlowTextTheme(
+            Theme.of(context).textTheme.copyWith(
+                  bodyMedium: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.grey[900]),
+                ),
+          ),
+          // dataTableTheme: const DataTableThemeData(
+          //   // dataTextStyle: TextStyle(fontSize: 17.5, fontWeight: FontWeight.w400),
+          //   headingTextStyle:
+          //       TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+          // ),
+          primarySwatch: Colors.blue,
+          useMaterial3: true,
         ),
-        // dataTableTheme: const DataTableThemeData(
-        //   // dataTextStyle: TextStyle(fontSize: 17.5, fontWeight: FontWeight.w400),
-        //   headingTextStyle:
-        //       TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-        // ),
-        primarySwatch: Colors.blue,
-        useMaterial3: true,
+        home: const HomeView(),
       ),
-      home: const HomeView(),
     );
   }
 }
