@@ -20,7 +20,7 @@ class _AutoCompleteWidgetState extends State<AutoCompleteWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Autocomplete<String>(
+    return Autocomplete(
       optionsBuilder: (TextEditingValue textEditingValue) {
         if (textEditingValue.text.isEmpty) {
           return const Iterable<String>.empty();
@@ -31,9 +31,6 @@ class _AutoCompleteWidgetState extends State<AutoCompleteWidget> {
               .contains(textEditingValue.text.toLowerCase());
         });
       },
-      onSelected: (String selection) {
-        debugPrint('Selected: $selection');
-      },
       fieldViewBuilder: (
         BuildContext context,
         TextEditingController controller,
@@ -42,9 +39,9 @@ class _AutoCompleteWidgetState extends State<AutoCompleteWidget> {
       ) {
         return TextField(
           style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+          decoration: InputDecoration(hintText: 'Search a Book'),
           controller: controller,
           focusNode: focusNode,
-          decoration: InputDecoration(hintText: 'Search a Book'),
           onSubmitted: (String value) {
             onFieldSubmitted();
           },
@@ -52,36 +49,36 @@ class _AutoCompleteWidgetState extends State<AutoCompleteWidget> {
       },
       optionsViewBuilder: (
         BuildContext context,
-        AutocompleteOnSelected<String> onSelected,
+        AutocompleteOnSelected<String> onselected,
         Iterable<String> options,
       ) {
         return Container(
-          margin: EdgeInsets.only(top: 16),
+          margin: EdgeInsets.only(top: 20),
           decoration: BoxDecoration(
-            color: Colors.black87,
             borderRadius: BorderRadius.circular(12),
+            color: Colors.black87,
           ),
           child: ListView.builder(
-            padding: EdgeInsets.zero,
-            shrinkWrap: true,
-            itemCount: options.length,
-            itemBuilder: (BuildContext context, int index) {
-              final String option = options.elementAt(index);
-              return InkWell(
-                onTap: () {
-                  onSelected(option);
-                },
-                child: Container(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 16, vertical: 12),
+              itemCount: options.length,
+              shrinkWrap: true,
+              padding: EdgeInsets.all(20),
+              itemBuilder: (context, index) {
+                final String currentOption = options.elementAt(index);
+
+                return Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: InkWell(
+                    onTap: () {
+                      onselected(currentOption);
+                    },
                     child: Text(
-                      option,
+                      currentOption,
                       style: GoogleFonts.poppins(
                           color: Colors.white, fontSize: 20),
-                    )),
-              );
-            },
-          ),
+                    ),
+                  ),
+                );
+              }),
         );
       },
     );

@@ -5,11 +5,14 @@ class AspectRatioWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 16 / 9,
-      child: Image.network(
-        'https://i.pinimg.com/736x/b1/35/5a/b1355a1c31e931c38bf2203a43bb2289.jpg',
-        fit: BoxFit.cover,
+    return ClipRRect(
+      borderRadius: BorderRadiusGeometry.circular(8),
+      child: AspectRatio(
+        aspectRatio: 1,
+        child: Image.network(
+          'https://i.pinimg.com/736x/b1/35/5a/b1355a1c31e931c38bf2203a43bb2289.jpg',
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }

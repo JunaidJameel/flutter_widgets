@@ -9,15 +9,15 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade900,
+      backgroundColor: Colors.grey.shade300,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 100),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              AspectRatioWidget(),
+              AutoCompleteWidget(),
               Row(),
             ],
           ),
