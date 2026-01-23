@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets/widgets/bottom_navbar_widget_56.dart';
+import 'package:flutter_widgets/widgets/drag_dropList_widget_61.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_widgets/home.dart';
 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Widgets',
         theme: ThemeData(
+          scaffoldBackgroundColor: Colors.grey.shade900,
           inputDecorationTheme: InputDecorationTheme(
             hintStyle: TextStyle(
                 fontSize: 18,
@@ -30,11 +32,19 @@ class MyApp extends StatelessWidget {
               borderRadius: BorderRadius.circular(12.0),
             ),
           ),
-          textTheme: GoogleFonts.barlowTextTheme(
+          textTheme: GoogleFonts.poppinsTextTheme(
             Theme.of(context).textTheme.copyWith(
                   bodyMedium: TextStyle(
-                      fontSize: 25,
+                      fontSize: 20,
                       fontWeight: FontWeight.w700,
+                      color: Colors.grey[900]),
+                  bodySmall: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.grey[900]),
+                  bodyLarge: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
                       color: Colors.grey[900]),
                 ),
           ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets/widgets/aspect_ratio_widget_59.dart';
 import 'package:flutter_widgets/widgets/auto_complete_widget_60.dart';
+import 'package:flutter_widgets/widgets/drag_dropList_widget_61.dart';
 import 'package:flutter_widgets/widgets/media_query_widget_58.dart';
 
 class HomeView extends StatelessWidget {
@@ -9,18 +10,11 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade300,
+      backgroundColor: Colors.blue.shade100,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 100),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              AutoCompleteWidget(),
-              Row(),
-            ],
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: DragDropListWidget(),
         ),
       ),
     );
