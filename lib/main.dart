@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
           textTheme: GoogleFonts.poppinsTextTheme(
             Theme.of(context).textTheme.copyWith(
                   bodyMedium: TextStyle(
-                      fontSize: 20,
+                      fontSize: 40,
                       fontWeight: FontWeight.w700,
                       color: Colors.grey[900]),
                   bodySmall: TextStyle(

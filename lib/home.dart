@@ -3,6 +3,7 @@ import 'package:flutter_widgets/widgets/aspect_ratio_widget_59.dart';
 import 'package:flutter_widgets/widgets/auto_complete_widget_60.dart';
 import 'package:flutter_widgets/widgets/drag_dropList_widget_61.dart';
 import 'package:flutter_widgets/widgets/media_query_widget_58.dart';
+import 'package:flutter_widgets/widgets/percent_indicator_package_62.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -10,11 +11,17 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue.shade100,
+      backgroundColor: Colors.grey.shade300,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
-          child: DragDropListWidget(),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 100),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              PercentIndicatorPackage(),
+              Row(),
+            ],
+          ),
         ),
       ),
     );
