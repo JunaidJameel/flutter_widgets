@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widgets/widgets/bottom_navbar_widget_56.dart';
 import 'package:flutter_widgets/widgets/drag_dropList_widget_61.dart';
 import 'package:flutter_widgets/widgets/grid_paper_widget_63.dart';
+import 'package:flutter_widgets/widgets/layout_builder_widget_64.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_widgets/home.dart';
 
@@ -20,7 +21,17 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Widgets',
         theme: ThemeData(
-          scaffoldBackgroundColor: Colors.grey.shade300,
+          scaffoldBackgroundColor: Colors.grey.shade100,
+          appBarTheme: AppBarTheme(
+            backgroundColor: Colors.grey.shade100,
+            elevation: 0,
+            centerTitle: true,
+            titleTextStyle: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.w700,
+                color: Colors.grey[900]),
+            iconTheme: IconThemeData(color: Colors.grey[900], size: 28),
+          ),
           inputDecorationTheme: InputDecorationTheme(
             hintStyle: TextStyle(
                 fontSize: 18,
@@ -57,7 +68,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           useMaterial3: true,
         ),
-        home: const HomeView(),
+        home: const LayoutBuilderWidget(),
       ),
     );
   }
