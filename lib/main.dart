@@ -47,11 +47,11 @@ class MyApp extends StatelessWidget {
           textTheme: GoogleFonts.poppinsTextTheme(
             Theme.of(context).textTheme.copyWith(
                   bodyMedium: TextStyle(
-                      fontSize: 40,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.grey[900]),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.grey[200]),
                   bodySmall: TextStyle(
-                      fontSize: 17,
+                      fontSize: 19,
                       fontWeight: FontWeight.w700,
                       color: Colors.grey[900]),
                   bodyLarge: TextStyle(
@@ -68,7 +68,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           useMaterial3: true,
         ),
-        home: const LayoutBuilderWidget(),
+        home: const HomeView(),
       ),
     );
   }
