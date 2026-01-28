@@ -60,11 +60,6 @@ class MyApp extends StatelessWidget {
                       color: Colors.grey[900]),
                 ),
           ),
-          // dataTableTheme: const DataTableThemeData(
-          //   // dataTextStyle: TextStyle(fontSize: 17.5, fontWeight: FontWeight.w400),
-          //   headingTextStyle:
-          //       TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-          // ),
           primarySwatch: Colors.blue,
           useMaterial3: true,
         ),

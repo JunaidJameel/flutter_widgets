@@ -4,9 +4,12 @@ import 'package:flutter_widgets/widgets/auto_complete_widget_60.dart';
 import 'package:flutter_widgets/widgets/drag_dropList_widget_61.dart';
 import 'package:flutter_widgets/widgets/grid_paper_widget_63.dart';
 import 'package:flutter_widgets/widgets/layout_builder_widget_64.dart';
+import 'package:flutter_widgets/widgets/listwheel_scrollview_widget_66.dart';
 import 'package:flutter_widgets/widgets/media_query_widget_58.dart';
 import 'package:flutter_widgets/widgets/percent_indicator_package_62.dart';
 import 'package:flutter_widgets/widgets/slidable_widget_65.dart';
+import 'package:flutter_widgets/widgets/video_player_package_67.dart';
+import 'package:video_player/video_player.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -14,11 +17,11 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.purple.shade100,
+      backgroundColor: Colors.grey.shade300,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 00.0, vertical: 130),
-          child: SlidablePackage(),
+          padding: const EdgeInsets.symmetric(horizontal: 00.0, vertical: 0),
+          child: Center(child: VideoPlayerPackage()),
         ),
       ),
     );
