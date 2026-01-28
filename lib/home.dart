@@ -18,11 +18,9 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade300,
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 00.0, vertical: 0),
-          child: Center(child: VideoPlayerPackage()),
-        ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 00.0, vertical: 0),
+        child: Center(child: VideoPlayerPackage()),
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
+import 'package:chewie/chewie.dart';
 
 class VideoPlayerPackage extends StatefulWidget {
   const VideoPlayerPackage({super.key});
@@ -9,79 +10,51 @@ class VideoPlayerPackage extends StatefulWidget {
 }
 
 class _VideoPlayerPackageState extends State<VideoPlayerPackage> {
-  late VideoPlayerController _controller;
+  late VideoPlayerController _videoController;
+  late ChewieController _chewieController;
   bool _isInitialized = false;
 
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.networkUrl(
-      Uri.parse('https://streamable.com/pcvgiq'),
-    )..initialize().then((_) {
-        setState(() => _isInitialized = true);
-      });
+
+    _videoController = VideoPlayerController.networkUrl(
+      Uri.parse(
+        'https://raw.githubusercontent.com/JunaidJameel/flutter_widgets/main/assets/video.MOV',
+      ),
+    );
+
+    _videoController.initialize().then((_) {
+      _chewieController = ChewieController(
+        videoPlayerController: _videoController,
+        autoPlay: true,
+        looping: true,
+        showControls: true,
+      );
+
+      setState(() => _isInitialized = true);
+    });
   }
 
   @override
   void dispose() {
-    _controller.dispose();
+    _chewieController.dispose();
+    _videoController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     if (!_isInitialized) {
-      return AspectRatio(
-        aspectRatio: 16 / 9,
-        child: Container(
-          color: Colors.black,
-          child: const Center(
-              child: CircularProgressIndicator(color: Colors.white)),
-        ),
+      return const Center(
+        child: CircularProgressIndicator(color: Colors.black),
       );
     }
 
     return AspectRatio(
-      aspectRatio: _controller.value.aspectRatio,
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          VideoPlayer(_controller),
-
-          // Play/Pause Button
-          IconButton(
-            onPressed: () {
-              setState(() {
-                _controller.value.isPlaying
-                    ? _controller.pause()
-                    : _controller.play();
-              });
-            },
-            icon: Icon(
-              _controller.value.isPlaying
-                  ? Icons.pause_circle_outline
-                  : Icons.play_circle_outline,
-              size: 64,
-              color: Colors.white,
-            ),
-          ),
-
-          // Progress Bar
-          Positioned(
-            bottom: 0,
-            left: 0,
-            right: 0,
-            child: VideoProgressIndicator(
-              _controller,
-              allowScrubbing: true,
-              colors: VideoProgressColors(
-                playedColor: Colors.red,
-                bufferedColor: Colors.grey.withValues(alpha: 0.5),
-                backgroundColor: Colors.white.withValues(alpha: 0.3),
-              ),
-            ),
-          ),
-        ],
+      aspectRatio: _videoController.value.aspectRatio,
+      child: Chewie(
+        controller: _chewieController,
       ),
     );
   }
