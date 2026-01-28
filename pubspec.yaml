@@ -44,7 +44,6 @@ dependencies:
   percent_indicator: ^4.2.5
   flutter_slidable: ^4.0.3
   video_player: ^2.10.1
-  chewie: ^1.13.0
 
 dev_dependencies:
   flutter_test:

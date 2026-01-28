@@ -3,6 +3,7 @@ import 'package:flutter_widgets/widgets/bottom_navbar_widget_56.dart';
 import 'package:flutter_widgets/widgets/drag_dropList_widget_61.dart';
 import 'package:flutter_widgets/widgets/grid_paper_widget_63.dart';
 import 'package:flutter_widgets/widgets/layout_builder_widget_64.dart';
+import 'package:flutter_widgets/widgets/video_player_package_67.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_widgets/home.dart';
 

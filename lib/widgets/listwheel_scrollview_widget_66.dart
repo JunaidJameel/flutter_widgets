@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class ListWheelScrollViewWidget extends StatelessWidget {
   ListWheelScrollViewWidget({super.key});
 
-  List<String> frameworks = [
+  final List<String> frameworks = [
     'Android',
     'Swift UI',
     'Flutter',
@@ -17,21 +17,23 @@ class ListWheelScrollViewWidget extends StatelessWidget {
       physics: const FixedExtentScrollPhysics(),
       diameterRatio: 1.2,
       perspective: 0.01,
+      squeeze: 0.8,
+      overAndUnderCenterOpacity: 0.4,
+      onSelectedItemChanged: (value) {},
       itemExtent: 40,
-      squeeze: 0.7,
-      overAndUnderCenterOpacity: 0.2,
       childDelegate: ListWheelChildBuilderDelegate(
-          childCount: frameworks.length,
-          builder: (context, index) {
-            return Text(
-              frameworks[index],
-              style: const TextStyle(
-                  fontSize: 35,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.white,
-                  letterSpacing: 1.2),
-            );
-          }),
+        builder: (context, index) {
+          return Text(
+            frameworks[index],
+            style: const TextStyle(
+                fontSize: 37,
+                fontWeight: FontWeight.w700,
+                color: Colors.white,
+                letterSpacing: 1.2),
+          );
+        },
+        childCount: frameworks.length,
+      ),
     );
   }
 }

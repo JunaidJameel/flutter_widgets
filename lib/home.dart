@@ -17,10 +17,12 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade300,
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 00.0, vertical: 0),
-        child: Center(child: VideoPlayerPackage()),
+      backgroundColor: Colors.grey.shade900,
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 00.0, vertical: 0),
+          child: Center(child: ListWheelScrollViewWidget()),
+        ),
       ),
     );
   }

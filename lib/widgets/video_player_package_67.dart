@@ -1,46 +1,51 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-import 'package:chewie/chewie.dart';
 
-class VideoPlayerPackage extends StatefulWidget {
-  const VideoPlayerPackage({super.key});
+class VideoPlayerWidget extends StatefulWidget {
+  const VideoPlayerWidget({super.key});
 
   @override
-  State<VideoPlayerPackage> createState() => _VideoPlayerPackageState();
+  State<VideoPlayerWidget> createState() => _VideoPlayerWidgetState();
 }
 
-class _VideoPlayerPackageState extends State<VideoPlayerPackage> {
-  late VideoPlayerController _videoController;
-  late ChewieController _chewieController;
+class _VideoPlayerWidgetState extends State<VideoPlayerWidget> {
+  late VideoPlayerController _controller;
   bool _isInitialized = false;
 
   @override
   void initState() {
     super.initState();
 
-    _videoController = VideoPlayerController.networkUrl(
+    _controller = VideoPlayerController.networkUrl(
       Uri.parse(
-        'https://raw.githubusercontent.com/JunaidJameel/flutter_widgets/main/assets/video.MOV',
+        'https://raw.githubusercontent.com/JunaidJameel/flutter_widgets/main/assets/video.mp4',
       ),
     );
 
-    _videoController.initialize().then((_) {
-      _chewieController = ChewieController(
-        videoPlayerController: _videoController,
-        autoPlay: true,
-        looping: true,
-        showControls: true,
-      );
-
+    _controller.initialize().then((_) {
+      if (!mounted) return;
       setState(() => _isInitialized = true);
+    });
+
+    // Listen to controller changes (play/pause/progress)
+    _controller.addListener(() {
+      if (!mounted) return;
+      setState(() {});
     });
   }
 
   @override
   void dispose() {
-    _chewieController.dispose();
-    _videoController.dispose();
+    _controller.dispose();
     super.dispose();
+  }
+
+  void _togglePlayPause() {
+    if (_controller.value.isPlaying) {
+      _controller.pause();
+    } else {
+      _controller.play();
+    }
   }
 
   @override
@@ -52,9 +57,40 @@ class _VideoPlayerPackageState extends State<VideoPlayerPackage> {
     }
 
     return AspectRatio(
-      aspectRatio: _videoController.value.aspectRatio,
-      child: Chewie(
-        controller: _chewieController,
+      aspectRatio: _controller.value.aspectRatio,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          // Video
+          VideoPlayer(_controller),
+
+          // Play / Pause Button
+          GestureDetector(
+            onTap: _togglePlayPause,
+            child: Icon(
+              _controller.value.isPlaying
+                  ? Icons.pause_circle_outline
+                  : Icons.play_circle_outline,
+              size: 64,
+              color: Colors.white,
+            ),
+          ),
+
+          // Progress Bar
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: VideoProgressIndicator(
+              padding: EdgeInsets.all(40),
+              _controller,
+              allowScrubbing: true,
+              colors: VideoProgressColors(
+                playedColor: Colors.red,
+                bufferedColor: Colors.grey.withValues(alpha: 0.5),
+                backgroundColor: Colors.white.withValues(alpha: 0.3),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
