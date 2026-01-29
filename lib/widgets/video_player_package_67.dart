@@ -10,84 +10,60 @@ class VideoPlayerWidget extends StatefulWidget {
 
 class _VideoPlayerWidgetState extends State<VideoPlayerWidget> {
   late VideoPlayerController _controller;
-  bool _isInitialized = false;
 
   @override
   void initState() {
     super.initState();
-
     _controller = VideoPlayerController.networkUrl(
       Uri.parse(
-        'https://raw.githubusercontent.com/JunaidJameel/flutter_widgets/main/assets/video.mp4',
+        'https://github.com/JunaidJameel/flutter_widgets/blob/main/assets/video.mp4?raw=true',
       ),
-    );
-
-    _controller.initialize().then((_) {
-      if (!mounted) return;
-      setState(() => _isInitialized = true);
-    });
-
-    // Listen to controller changes (play/pause/progress)
-    _controller.addListener(() {
-      if (!mounted) return;
-      setState(() {});
-    });
+    )..initialize().then((_) {
+        setState(() {});
+      });
   }
 
   @override
   void dispose() {
-    _controller.dispose();
     super.dispose();
-  }
-
-  void _togglePlayPause() {
-    if (_controller.value.isPlaying) {
-      _controller.pause();
-    } else {
-      _controller.play();
-    }
+    _controller.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    if (!_isInitialized) {
+    if (!_controller.value.isInitialized) {
       return const Center(
-        child: CircularProgressIndicator(color: Colors.black),
+        child: CircularProgressIndicator(
+          color: Colors.white,
+        ),
       );
     }
 
-    return AspectRatio(
-      aspectRatio: _controller.value.aspectRatio,
+    return GestureDetector(
+      onTap: () async {
+        _controller.value.isPlaying
+            ? await _controller.pause()
+            : await _controller.play();
+        setState(() {});
+      },
       child: Stack(
         alignment: Alignment.center,
         children: [
-          // Video
-          VideoPlayer(_controller),
-
-          // Play / Pause Button
-          GestureDetector(
-            onTap: _togglePlayPause,
-            child: Icon(
-              _controller.value.isPlaying
-                  ? Icons.pause_circle_outline
-                  : Icons.play_circle_outline,
-              size: 64,
-              color: Colors.white,
-            ),
+          SizedBox(
+            height: double.infinity,
+            child: VideoPlayer(_controller),
           ),
-
-          // Progress Bar
+          Icon(
+            !_controller.value.isPlaying ? Icons.play_circle_outline : null,
+            size: 64,
+            color: Colors.white,
+          ),
           Align(
             alignment: Alignment.bottomCenter,
             child: VideoProgressIndicator(
               padding: EdgeInsets.all(40),
               _controller,
               allowScrubbing: true,
-              colors: VideoProgressColors(
-                playedColor: Colors.red,
-                bufferedColor: Colors.grey.withValues(alpha: 0.5),
-                backgroundColor: Colors.white.withValues(alpha: 0.3),
-              ),
             ),
           ),
         ],
