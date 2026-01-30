@@ -44,6 +44,7 @@ dependencies:
   percent_indicator: ^4.2.5
   flutter_slidable: ^4.0.3
   video_player: ^2.10.1
+  custom_refresh_indicator: ^4.0.1
 
 dev_dependencies:
   flutter_test:
