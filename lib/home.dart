@@ -8,6 +8,7 @@ import 'package:flutter_widgets/widgets/listwheel_scrollview_widget_66.dart';
 import 'package:flutter_widgets/widgets/media_query_widget_58.dart';
 import 'package:flutter_widgets/widgets/percent_indicator_package_62.dart';
 import 'package:flutter_widgets/widgets/slidable_widget_65.dart';
+import 'package:flutter_widgets/widgets/stateful_builder_widget_69.dart';
 import 'package:flutter_widgets/widgets/video_player_package_67.dart';
 import 'package:video_player/video_player.dart';
 
@@ -18,7 +19,11 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade900,
-      body: VideoPlayerWidget(),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [StatefulBuilderWidget(), Row()],
+      ),
     );
   }
 }
