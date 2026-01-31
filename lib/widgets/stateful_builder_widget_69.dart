@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class StatefulBuilderWidget extends StatelessWidget {
   const StatefulBuilderWidget({super.key});
@@ -13,7 +14,8 @@ class StatefulBuilderWidget extends StatelessWidget {
           children: [
             Text(
               'Count $count',
-              style: const TextStyle(fontSize: 35),
+              style:
+                  GoogleFonts.oswald(fontSize: 35, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 30),
             ElevatedButton(

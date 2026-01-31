@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/widgets/animate_do_package_70.dart';
 import 'package:flutter_widgets/widgets/aspect_ratio_widget_59.dart';
 import 'package:flutter_widgets/widgets/auto_complete_widget_60.dart';
 import 'package:flutter_widgets/widgets/drag_dropList_widget_61.dart';
@@ -22,7 +23,7 @@ class HomeView extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [StatefulBuilderWidget(), Row()],
+        children: [AnimateDoPackage(), Row()],
       ),
     );
   }
