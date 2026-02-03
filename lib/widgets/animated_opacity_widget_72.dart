@@ -20,14 +20,14 @@ class _AnimatedOpacityWidgetState extends State<AnimatedOpacityWidget> {
           duration: const Duration(milliseconds: 500),
           child: Image.network('https://iili.io/fZZvuXn.png'),
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         ElevatedButton(
             onPressed: () {
               setState(() {
                 _show = !_show;
               });
             },
-            child: Text(_show ? "Hide " : "Show")),
+            child: Text(_show ? 'Hide' : 'Show'))
       ],
     );
   }

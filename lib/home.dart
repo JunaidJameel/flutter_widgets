@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets/widgets/animated_opacity_widget_72.dart';
+import 'package:flutter_widgets/widgets/glass_morphism_widget_73.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -8,10 +9,9 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade300,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [AnimatedOpacityWidget(), Row()],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 0.0),
+        child: Center(child: AnimatedOpacityWidget()),
       ),
     );
   }
