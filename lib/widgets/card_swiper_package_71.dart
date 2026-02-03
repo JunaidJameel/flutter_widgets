@@ -16,6 +16,7 @@ class CardSwiperWidget extends StatelessWidget {
       height: 550,
       width: double.infinity,
       child: CardSwiper(
+        maxAngle: 100,
         backCardOffset: const Offset(0, 20),
         cardBuilder: (context, index, horizontal, vertical) {
           return ClipRRect(

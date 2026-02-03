@@ -26,16 +26,16 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.grey[100],
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.blue,
+              backgroundColor: Colors.black,
               foregroundColor: Colors.white,
-              textStyle: const TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w600,
+              textStyle: GoogleFonts.scada(
+                fontSize: 30,
+                fontWeight: FontWeight.w500,
               ),
               padding:
-                  const EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
+                  const EdgeInsets.symmetric(horizontal: 40.0, vertical: 8.0),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12.0),
+                borderRadius: BorderRadius.circular(30.0),
               ),
             ),
           ),
