@@ -11,7 +11,7 @@ class HomeView extends StatelessWidget {
       backgroundColor: Colors.grey.shade300,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 0.0),
-        child: Center(child: AnimatedOpacityWidget()),
+        child: GlassMorphismWidget(),
       ),
     );
   }
