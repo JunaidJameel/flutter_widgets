@@ -16,7 +16,7 @@ class GlassMorphismWidget extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Center(
           child: ClipRRect(
             borderRadius: BorderRadiusGeometry.circular(30),
@@ -26,7 +26,7 @@ class GlassMorphismWidget extends StatelessWidget {
                 height: 420,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.1),
+                    color: Colors.white.withValues(alpha: .1),
                     borderRadius: BorderRadius.circular(30),
                     border:
                         Border.all(color: Colors.white.withValues(alpha: .2))),
