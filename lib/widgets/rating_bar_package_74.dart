@@ -8,18 +8,15 @@ class RatingBarPackage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: RatingBar.builder(
-        initialRating: 2,
-        minRating: 5,
+        minRating: 1,
+        itemBuilder: (context, index) {
+          return const Icon(Icons.star, color: Colors.amber);
+        },
+        onRatingUpdate: (rating) {},
+        unratedColor: Colors.grey.shade600,
+        itemSize: 50,
         direction: Axis.horizontal,
         allowHalfRating: true,
-        itemCount: 5,
-        itemSize: 24,
-        itemBuilder: (context, _) => const Icon(
-          Icons.star,
-          color: Colors.amber,
-        ),
-        unratedColor: Colors.grey.withValues(alpha: 0.3),
-        onRatingUpdate: (rating) {},
       ),
     );
   }
