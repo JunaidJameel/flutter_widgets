@@ -11,15 +11,13 @@ class GradientTextWidget extends StatelessWidget {
         style: TextStyle(
           fontSize: 45,
           fontWeight: FontWeight.bold,
-          //color: Colors.black,
+          // color: Colors.black,
           foreground: Paint()
-            ..shader = LinearGradient(
-              colors: [
-                Colors.black,
-                Colors.purple,
-                Colors.red[600]!,
-              ],
-            ).createShader(Rect.fromLTRB(50, 0, 300, 70)),
+            ..shader = LinearGradient(colors: [
+              Colors.black,
+              Colors.purple,
+              Colors.red[600]!,
+            ]).createShader(Rect.fromLTRB(50, 0, 300, 70)),
         ),
       ),
     );
