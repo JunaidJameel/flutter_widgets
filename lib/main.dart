@@ -23,17 +23,17 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Widgets',
         theme: ThemeData(
-          scaffoldBackgroundColor: Colors.grey[100],
+          scaffoldBackgroundColor: Colors.grey.shade900,
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.black,
+              backgroundColor: Colors.deepPurple,
               foregroundColor: Colors.white,
               textStyle: GoogleFonts.scada(
-                fontSize: 30,
+                fontSize: 22,
                 fontWeight: FontWeight.w500,
               ),
               padding:
-                  const EdgeInsets.symmetric(horizontal: 40.0, vertical: 8.0),
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8.0),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30.0),
               ),
