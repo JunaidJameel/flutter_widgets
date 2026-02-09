@@ -5,6 +5,7 @@ import 'package:flutter_widgets/widgets/glass_morphism_widget_73.dart';
 import 'package:flutter_widgets/widgets/gradient_text_widget_75.dart';
 import 'package:flutter_widgets/widgets/rotated_box_widget_76.dart';
 import 'package:flutter_widgets/widgets/rating_bar_package_74.dart';
+import 'package:flutter_widgets/widgets/valuelistenable_builder_widget_78.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -12,10 +13,10 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade900,
+      backgroundColor: Colors.grey.shade300,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        child: Center(child: SelectableTextWidget()),
+        child: Center(child: ValueListenableBuilderWidget()),
       ),
     );
   }

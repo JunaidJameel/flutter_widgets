@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
               backgroundColor: Colors.deepPurple,
               foregroundColor: Colors.white,
               textStyle: GoogleFonts.scada(
-                fontSize: 22,
+                fontSize: 24,
                 fontWeight: FontWeight.w500,
               ),
               padding:
@@ -50,8 +50,9 @@ class MyApp extends StatelessWidget {
             iconTheme: IconThemeData(color: Colors.grey[900], size: 28),
           ),
           inputDecorationTheme: InputDecorationTheme(
+            contentPadding: EdgeInsets.symmetric(horizontal: 12),
             hintStyle: TextStyle(
-                fontSize: 18,
+                fontSize: 16,
                 fontWeight: FontWeight.w600,
                 color: Colors.grey[900]),
             focusedBorder: OutlineInputBorder(
