@@ -50,6 +50,8 @@ dependencies:
   fl_chart: ^1.1.1
   flutter_rating_bar: ^4.0.1
   fluttertoast: ^9.0.0
+  story: ^1.1.0
+  url_launcher: ^6.3.2
 
 dev_dependencies:
   flutter_test:
