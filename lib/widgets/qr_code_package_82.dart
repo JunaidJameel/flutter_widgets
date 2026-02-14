@@ -9,10 +9,10 @@ class QrCodePackage extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadiusGeometry.circular(25),
       child: QrImageView(
-        padding: EdgeInsets.all(20),
-        size: 250,
-        backgroundColor: Colors.white,
         data: 'https://pub.dev/packages/qr_flutter',
+        backgroundColor: Colors.white,
+        size: 250,
+        padding: EdgeInsets.all(20),
       ),
     );
   }

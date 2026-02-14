@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
               minimumSize: Size(double.infinity, 20),
-              backgroundColor: Colors.black,
+              backgroundColor: const Color.fromARGB(255, 33, 132, 212),
               foregroundColor: Colors.white,
               textStyle: GoogleFonts.ubuntu(
                 fontSize: 25,
@@ -66,15 +66,15 @@ class MyApp extends StatelessWidget {
           textTheme: GoogleFonts.poppinsTextTheme(
             Theme.of(context).textTheme.copyWith(
                   bodyMedium: TextStyle(
-                      fontSize: 20,
+                      fontSize: 17,
                       fontWeight: FontWeight.w500,
                       color: Colors.grey[200]),
                   bodySmall: TextStyle(
-                      fontSize: 19,
+                      fontSize: 17,
                       fontWeight: FontWeight.w700,
                       color: Colors.grey[900]),
                   bodyLarge: TextStyle(
-                      fontSize: 20,
+                      fontSize: 17,
                       fontWeight: FontWeight.w600,
                       color: Colors.grey[900]),
                 ),
