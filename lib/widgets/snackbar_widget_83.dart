@@ -10,7 +10,10 @@ class SnackbarWidget extends StatelessWidget {
           children: [
             Icon(Icons.check, color: Colors.green, size: 25),
             SizedBox(width: 20),
-            Text('This is a minimal snackbar!'),
+            Text(
+              'This is a minimal snackbar!',
+              style: TextStyle(fontSize: 20),
+            ),
           ],
         ),
         behavior: SnackBarBehavior.floating,
