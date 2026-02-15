@@ -10,7 +10,7 @@ class ThreeDView extends StatelessWidget {
       height: 600,
       child: Flutter3DViewer(
         src: 'assets/car.glb',
-        enableTouch: false,
+        enableTouch: true,
         onLoad: (value) {},
         progressBarColor: Colors.transparent,
       ),
