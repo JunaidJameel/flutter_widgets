@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/widgets/auto_size_text.dart';
+import 'package:flutter_widgets/widgets/auto_size_text_package_85.dart';
+import 'package:flutter_widgets/widgets/like_button_package_86.dart';
 import 'package:flutter_widgets/widgets/qr_code_package_82.dart';
 import 'package:flutter_widgets/widgets/snackbar_widget_83.dart';
 import 'package:flutter_widgets/widgets/three_d_package_84.dart';
@@ -10,14 +11,14 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade300,
+      backgroundColor: Colors.grey.shade900,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            AutoSizePackage(),
+            LikeButtonPackage(),
             Row(),
           ],
         ),

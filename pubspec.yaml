@@ -55,6 +55,7 @@ dependencies:
   qr_flutter: ^4.1.0
   flutter_3d_controller: ^2.3.0
   auto_size_text: ^3.0.0
+  like_button: ^2.1.0
 
 dev_dependencies:
   flutter_test:
