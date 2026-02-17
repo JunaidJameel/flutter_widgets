@@ -9,17 +9,17 @@ class LikeButtonPackage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LikeButton(
-      animationDuration: Duration(seconds: 1),
-      size: 50,
       likeCount: count,
+      size: 50,
       onTap: (isLiked) async {
         return !isLiked;
       },
+      countPostion: CountPostion.bottom,
       likeBuilder: (isLiked) {
         return Icon(
           Icons.favorite,
           color: isLiked ? Colors.red : Colors.grey,
-          size: 40,
+          size: 50,
         );
       },
     );
