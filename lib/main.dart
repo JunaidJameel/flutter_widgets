@@ -1,14 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/widgets/bottom_navbar_widget_56.dart';
-import 'package:flutter_widgets/widgets/drag_dropList_widget_61.dart';
-import 'package:flutter_widgets/widgets/grid_paper_widget_63.dart';
-import 'package:flutter_widgets/widgets/layout_builder_widget_64.dart';
-import 'package:flutter_widgets/widgets/pull_to_refresh_68.dart';
-import 'package:flutter_widgets/widgets/video_player_package_67.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_widgets/home.dart';
 
 void main() {
+  ErrorWidget.builder = (FlutterErrorDetails details) {
+    return Column(
+      children: [
+        ClipRRect(
+            borderRadius: BorderRadiusGeometry.circular(16),
+            child: Image.asset('assets/error_image.png')),
+        SizedBox(height: 30),
+        Text(
+          details.exception.toString(),
+          style: TextStyle(
+            color: Colors.red,
+            fontSize: 24,
+          ),
+          textAlign: TextAlign.center,
+        )
+      ],
+    );
+  };
+
   runApp(const MyApp());
 }
 
