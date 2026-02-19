@@ -8,5 +8,7 @@ class CustomErrorWidget extends StatelessWidget {
     return Builder(builder: (context) {
       throw Exception("Test Error");
     });
+
+    // For Custom Error UI CheckOUt Main.dart File. specialy main method. Thanks
   }
 }

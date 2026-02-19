@@ -39,12 +39,12 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.grey.shade900,
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
-              minimumSize: Size(double.infinity, 20),
-              backgroundColor: const Color.fromARGB(255, 33, 132, 212),
+              minimumSize: Size(330, 20),
+              backgroundColor: Colors.deepPurple[400],
               foregroundColor: Colors.white,
-              textStyle: GoogleFonts.ubuntu(
+              textStyle: GoogleFonts.poppins(
                 fontSize: 25,
-                fontWeight: FontWeight.w400,
+                fontWeight: FontWeight.w500,
               ),
               padding:
                   const EdgeInsets.symmetric(horizontal: 25.0, vertical: 10.0),

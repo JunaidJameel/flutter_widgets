@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/widgets/animated_rotation_widget_89.dart';
 import 'package:flutter_widgets/widgets/auto_size_text_package_85.dart';
 import 'package:flutter_widgets/widgets/error_widget_88.dart';
 import 'package:flutter_widgets/widgets/like_button_package_86.dart';
@@ -20,7 +21,7 @@ class HomeView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            CustomErrorWidget(),
+            AnimatedRotationWidget(),
             Row(),
           ],
         ),
