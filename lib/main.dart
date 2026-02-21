@@ -39,11 +39,11 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.grey.shade900,
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
-              minimumSize: Size(330, 20),
+              minimumSize: Size(double.infinity, 20),
               backgroundColor: Colors.deepPurple[400],
               foregroundColor: Colors.white,
               textStyle: GoogleFonts.poppins(
-                fontSize: 25,
+                fontSize: 22,
                 fontWeight: FontWeight.w500,
               ),
               padding:

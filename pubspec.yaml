@@ -57,6 +57,7 @@ dependencies:
   auto_size_text: ^3.0.0
   like_button: ^2.1.0
   slide_to_act: 2.0.2
+  uuid: ^4.5.2
 
 dev_dependencies:
   flutter_test:

@@ -7,6 +7,7 @@ import 'package:flutter_widgets/widgets/qr_code_package_82.dart';
 import 'package:flutter_widgets/widgets/slide_to_act_package_87.dart';
 import 'package:flutter_widgets/widgets/snackbar_widget_83.dart';
 import 'package:flutter_widgets/widgets/three_d_package_84.dart';
+import 'package:flutter_widgets/widgets/uuid_package_90.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -14,14 +15,14 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade300,
+      backgroundColor: Colors.grey.shade900,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            AnimatedRotationWidget(),
+            UuidPackage(),
             Row(),
           ],
         ),
