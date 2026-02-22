@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
               minimumSize: Size(double.infinity, 20),
-              backgroundColor: Colors.deepPurple[400],
+              backgroundColor: Colors.black87,
               foregroundColor: Colors.white,
               textStyle: GoogleFonts.poppins(
                 fontSize: 22,

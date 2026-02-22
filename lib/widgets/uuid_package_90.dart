@@ -33,10 +33,7 @@ class _UuidPackageState extends State<UuidPackage> {
           ),
         ),
         const SizedBox(height: 50),
-        ElevatedButton(
-          onPressed: _generateNewId,
-          child: const Text("Regenerate ID"),
-        ),
+        ElevatedButton(onPressed: _generateNewId, child: Text('Regenerate ID')),
       ],
     );
   }
