@@ -16,7 +16,7 @@ class AwesomeSnackbar extends StatelessWidget {
         content: AwesomeSnackbarContent(
           title: 'Sucess',
           message: 'Your action was completed sucessfully.',
-          contentType: ContentType.warning,
+          contentType: ContentType.success,
         ),
       ));
   }
