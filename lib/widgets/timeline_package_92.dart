@@ -52,10 +52,15 @@ class _ModernStepperWidgetState extends State<ModernStepperWidget> {
       },
       steps: List.generate(steps.length, (index) {
         return EnhanceStep(
-          title: Text(steps[index]),
+          title: Text(
+            steps[index],
+            style: TextStyle(fontSize: 20),
+          ),
           content: Text(
             "Content for ${steps[index]}",
-            style: const TextStyle(color: Colors.black, fontSize: 15),
+            style: const TextStyle(
+              color: Colors.black,
+            ),
           ),
         );
       }),
