@@ -12,7 +12,7 @@ class EmojiPackage extends StatelessWidget {
         FluttermojiCircleAvatar(
           radius: 100,
         ),
-        SizedBox(height: 70),
+        SizedBox(height: 130),
         Expanded(child: FluttermojiCustomizer()),
       ],
     );
