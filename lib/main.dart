@@ -66,7 +66,7 @@ class MyApp extends StatelessWidget {
           inputDecorationTheme: InputDecorationTheme(
             contentPadding: EdgeInsets.symmetric(horizontal: 12),
             hintStyle: TextStyle(
-                fontSize: 16,
+                fontSize: 17,
                 fontWeight: FontWeight.w600,
                 color: Colors.grey[900]),
             focusedBorder: OutlineInputBorder(
@@ -79,16 +79,16 @@ class MyApp extends StatelessWidget {
           textTheme: GoogleFonts.poppinsTextTheme(
             Theme.of(context).textTheme.copyWith(
                   bodyMedium: TextStyle(
-                      fontSize: 17,
+                      fontSize: 18,
                       fontWeight: FontWeight.w500,
                       color: Colors.grey[200]),
                   bodySmall: TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.w700,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
                       color: Colors.grey[900]),
                   bodyLarge: TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.w600,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
                       color: Colors.grey[900]),
                 ),
           ),
