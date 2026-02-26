@@ -63,6 +63,7 @@ dependencies:
   fluttermoji: ^1.0.1
   just_audio: ^0.10.5
   any_link_preview: ^3.0.1
+  pinput: ^6.0.2
 
 dev_dependencies:
   flutter_test:
