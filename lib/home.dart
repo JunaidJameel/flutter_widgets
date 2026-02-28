@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/widgets/searchbar_widget_97.dart';
 import 'package:flutter_widgets/widgets/link_preview_94.dart';
 
 import 'package:flutter_widgets/widgets/awesome_snackbar_package_91.dart';
@@ -18,8 +19,11 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100],
-      body: StoryPackage(),
+      backgroundColor: Colors.grey[900],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 150),
+        child: SearchBarWidget(),
+      ),
     );
   }
 }
