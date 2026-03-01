@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/widgets/carouselview_widget_98.dart';
 import 'package:flutter_widgets/widgets/searchbar_widget_97.dart';
 import 'package:flutter_widgets/widgets/link_preview_94.dart';
 
@@ -19,10 +20,10 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
+      backgroundColor: Colors.grey[300],
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 150),
-        child: SearchBarWidget(),
+        child: CarouselViewWidget(),
       ),
     );
   }
