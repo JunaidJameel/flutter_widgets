@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.grey.shade900,
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
-              minimumSize: Size(double.infinity, 20),
+              minimumSize: Size(327, 20),
               backgroundColor: Colors.black87,
               foregroundColor: Colors.white,
               textStyle: GoogleFonts.poppins(
@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),
               padding:
-                  const EdgeInsets.symmetric(horizontal: 25.0, vertical: 10.0),
+                  const EdgeInsets.symmetric(horizontal: 35.0, vertical: 10.0),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12.0),
               ),
@@ -65,15 +65,19 @@ class MyApp extends StatelessWidget {
             iconTheme: IconThemeData(color: Colors.grey[900], size: 28),
           ),
           inputDecorationTheme: InputDecorationTheme(
+            filled: true,
+            fillColor: Colors.transparent,
+            labelStyle: TextStyle(
+                fontSize: 17, fontWeight: FontWeight.w600, color: Colors.white),
             contentPadding: EdgeInsets.symmetric(horizontal: 12),
             hintStyle: TextStyle(
-                fontSize: 17,
-                fontWeight: FontWeight.w600,
-                color: Colors.grey[900]),
+                fontSize: 17, fontWeight: FontWeight.w600, color: Colors.white),
             focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.white),
               borderRadius: BorderRadius.circular(12.0),
             ),
             enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.white),
               borderRadius: BorderRadius.circular(12.0),
             ),
           ),
@@ -86,11 +90,11 @@ class MyApp extends StatelessWidget {
                   bodySmall: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w500,
-                      color: Colors.grey[900]),
+                      color: Colors.grey[300]),
                   bodyLarge: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w500,
-                      color: Colors.grey[900]),
+                      color: Colors.grey[300]),
                 ),
           ),
           primarySwatch: Colors.blue,
