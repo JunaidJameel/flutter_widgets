@@ -37,11 +37,16 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Widgets',
         theme: ThemeData(
+          textSelectionTheme: TextSelectionThemeData(
+            cursorColor: Colors.white,
+            selectionColor: Colors.white24,
+            selectionHandleColor: Colors.white,
+          ),
           scaffoldBackgroundColor: Colors.grey.shade900,
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
               minimumSize: Size(327, 20),
-              backgroundColor: Colors.black87,
+              backgroundColor: Colors.grey[900],
               foregroundColor: Colors.white,
               textStyle: GoogleFonts.poppins(
                 fontSize: 22,
@@ -86,15 +91,15 @@ class MyApp extends StatelessWidget {
                   bodyMedium: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w500,
-                      color: Colors.grey[200]),
+                      color: Colors.grey[900]),
                   bodySmall: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w500,
-                      color: Colors.grey[300]),
+                      color: Colors.grey[900]),
                   bodyLarge: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w500,
-                      color: Colors.grey[300]),
+                      color: Colors.grey[900]),
                 ),
           ),
           primarySwatch: Colors.blue,

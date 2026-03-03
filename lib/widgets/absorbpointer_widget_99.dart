@@ -20,11 +20,11 @@ class _AbsorbPointerWidgetState extends State<AbsorbPointerWidget> {
             child: TextField(
               decoration: InputDecoration(
                   labelText:
-                      isEnabled ? 'Enter your Name' : 'Textfield is Blocked'),
+                      isEnabled ? 'Enter your Name' : 'TextField is Blocked'),
             ),
           ),
         ),
-        SizedBox(width: 30),
+        const SizedBox(width: 20),
         Switch(
             value: isEnabled,
             onChanged: (value) {
